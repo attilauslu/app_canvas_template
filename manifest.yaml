@@ -1,0 +1,129 @@
+manifestVersion: 1
+
+info:
+  name: CLC Create and register entities
+  version: 0.1.2
+  
+features:
+  - name: CLC Create and register entities
+    id: CLC_create_and_register_entities
+    type: CANVAS
+    
+subscriptions:
+  deliveryMethod: WEBHOOK
+  messages:
+  - type: v2.canvas.initialized
+  - type: v2.canvas.userInteracted
+  - type: v2.canvas.created
+  
+configuration:
+  - name: BACs storage folder
+    type: folder
+    description: Folder where BACs will be stored in real env, in test env all the following are return_folder_canvas_results.
+    # value: lib_jduQYl5u
+    requiredConfig: true
+  - name: crRNA storage folder
+    type: folder
+    description: Folder where crRNAs will be stored.
+    # value: lib_jduQYl5u
+    requiredConfig: true
+  - name: DNA fragments storage folder
+    type: folder
+    description: Folder where DNA fragments will be stored (called Genomes).
+    # value: lib_jduQYl5u
+    requiredConfig: true
+  - name: Receivers assemblies storage folder
+    type: folder
+    description: Folder where receiver assemblies will be stored (called Receivers).
+    # value: lib_jduQYl5u
+    requiredConfig: true
+  - name: Primers storage folder
+    type: folder
+    description: Folder where receiver and screening primers will be stored.
+    # value: lib_jduQYl5u
+    requiredConfig: true
+  - name: CLC strains storage folder
+    type: folder
+    description: Folder where strains will be retreived from (called Strains), this app will NOT create new strains. 
+    # value: lib_NvGRC0iy
+    requiredConfig: true
+  - name: NBC strains storage folder
+    type: folder
+    description: Folder where strains will be retreived from (called NBC Strains), this app will NOT create new strains. If you can't find it you probably don't have access to it, ask the project leader to grant you access.
+    # value: lib_NvGRC0iy
+    requiredConfig: true
+  - name: CSV files storage folder
+    type: folder
+    description: Folder where CSV files will be stored.
+    # value: lib_Fm3kgyWM
+    requiredConfig: true
+
+
+  - name: Strain schema
+    type: entity_schema
+    subtype: custom_entity
+    description: Schema for strains
+    # value: ts_vTRBvhxH
+    requiredConfig: true
+  - name: gRNA schema
+    type: entity_schema
+    subtype: dna_sequence
+    description: Schema for crRNA (called gRNA)
+    # value: ts_U5cFoGIs
+    requiredConfig: true
+  - name: Primer schema
+    type: entity_schema
+    subtype: dna_sequence
+    description: Schema for receiver and screening primers (called primer)
+    # value: ts_D4f7w1Fe
+    requiredConfig: true
+  - name: CLC Receiver schema
+    type: entity_schema
+    # subtype: dna_sequence for test, custom entity for deploy
+    description: Schema for receiver assemblies
+    # value: ts_nvGy7R4V
+    requiredConfig: true
+  - name: CLC BAC schema
+    type: entity_schema
+    # subtype: dna_sequence for test, custom entity for deploy
+    description: Schema for BACs, this might be a DNA seq in test and a custome entity in real environmnet
+    # value: ts_IZwpsGZ0
+    requiredConfig: true
+  - name: DNA fragment schema
+    type: entity_schema
+    subtype: dna_sequence
+    description: Schema for DNA fragments
+    # value: ts_icrdbHSJ
+    requiredConfig: true
+  - name: CSV Entity schema
+    type: entity_schema
+    subtype: custom_entity
+    description: Schema for CSV files
+    # value: ts_WDtkRWgc
+    requiredConfig: true   
+
+  - name: Result schema
+    type: result_schema
+    # subtype: analysis_output
+    description: Schema for the results table that receives all the created entities (CLC BAC Entities Registration Output), clc_bac_entities_registration_output
+    # value: assaysch_ZYJgdMbJ
+    requiredConfig: true
+
+  - name: Plate 384 wells schema
+    type: plate_schema
+    # subtype: 
+    description: Schema container plate with 384 wells
+    # value: pltsch_uMXQPcW3
+    requiredConfig: true
+
+  - name: Registry schema
+    type: registry
+    description: Schema of the registry
+    # value: src_1MhfzKi0
+    requiredConfig: true
+
+  - name: Project schema
+    type: project
+    description: Schema of the project where all the data will be saved
+    # value: src_xTMquARc
+    requiredConfig: true

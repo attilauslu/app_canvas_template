@@ -1,0 +1,12 @@
+nohup: ignoring input
+ * Serving Flask app 'benchling-app'
+ * Debug mode: on
+werkzeug - 2025-03-12 09:47:51,927 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.12.0.4:8000
+werkzeug - 2025-03-12 09:47:51,928 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} - [33mPress CTRL+C to quit[0m
+werkzeug - 2025-03-12 09:47:51,929 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} -  * Restarting with stat
+werkzeug - 2025-03-12 09:47:52,641 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} -  * Debugger is active!
+werkzeug - 2025-03-12 09:47:52,642 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} -  * Debugger PIN: 866-615-692
+werkzeug - 2025-03-12 10:00:57,847 - {/home/lajamu/app-examples-python/venv/lib/python3.11/site-packages/werkzeug/_internal.py:97} - 213.89.120.169 - - [12/Mar/2025 10:00:57] "GET /health HTTP/1.1" 200 -
