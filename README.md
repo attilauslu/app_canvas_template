@@ -122,7 +122,7 @@ If you have updated the manifest you can change it in Version history (in the de
    - Under the **Configuration** tab, select the correct values for each folder and entity schema you defined.  
    - Save your configuration—this ensures that when you run the app, it has permission to read/write the appropriate Benchling data, and you can have different values selected in different environments.
 
-5. **Run docker desktop
+5. **Run docker desktop**
 
 6. **Grant extra access for testing environment**  
    - You may need to grant extra access in the Benchling test environment. In Benchling, open the target project, go to Project Settings → Collaborators, add your app as a collaborator, and assign the Read access policy.
