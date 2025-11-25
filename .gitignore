@@ -201,3 +201,5 @@ data/**
 !data/**/.gitkeep
 
 letsencrypt/
+
+/app_canvas_venv/

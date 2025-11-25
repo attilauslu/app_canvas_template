@@ -1,12 +1,12 @@
 manifestVersion: 1
 
 info:
-  name: CLC Create and register entities
-  version: 0.1.2
+  name: attila_app_test_laia-template
+  version: 0.1.30
   
 features:
-  - name: CLC Create and register entities
-    id: CLC_create_and_register_entities
+  - name: attila_app_test_laia-template
+    id: attila_app_test_laia-template
     type: CANVAS
     
 subscriptions:
@@ -61,19 +61,19 @@ configuration:
 
   - name: Strain schema
     type: entity_schema
-    subtype: custom_entity
+    #subtype: custom_entity
     description: Schema for strains
     # value: ts_vTRBvhxH
     requiredConfig: true
   - name: gRNA schema
     type: entity_schema
-    subtype: dna_sequence
+    #subtype: dna_sequence
     description: Schema for crRNA (called gRNA)
     # value: ts_U5cFoGIs
     requiredConfig: true
   - name: Primer schema
     type: entity_schema
-    subtype: dna_sequence
+    #subtype: dna_sequence
     description: Schema for receiver and screening primers (called primer)
     # value: ts_D4f7w1Fe
     requiredConfig: true
@@ -91,13 +91,13 @@ configuration:
     requiredConfig: true
   - name: DNA fragment schema
     type: entity_schema
-    subtype: dna_sequence
+    #subtype: dna_sequence
     description: Schema for DNA fragments
     # value: ts_icrdbHSJ
     requiredConfig: true
   - name: CSV Entity schema
     type: entity_schema
-    subtype: custom_entity
+    #subtype: custom_entity
     description: Schema for CSV files
     # value: ts_WDtkRWgc
     requiredConfig: true   
