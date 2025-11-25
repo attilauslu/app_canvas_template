@@ -120,20 +120,25 @@ If you have updated the manifest you can change it in Version history (in the de
 4. **Configure Schemas Before First Run**  
    - Inside your app’s settings in the Developer Console , click **View App in the Workspace** (top right corner).  
    - Under the **Configuration** tab, select the correct values for each folder and entity schema you defined.  
-   - Save your configuration—this ensures that when you run the app, it has permission to read/write the appropriate Benchling data, and you can have different values selected in different environments.  
+   - Save your configuration—this ensures that when you run the app, it has permission to read/write the appropriate Benchling data, and you can have different values selected in different environments.
 
-5. **Grant extra access for testing environment**  
+5. **Run docker desktop**
+
+6. **Grant extra access for testing environment**  
    - You may need to grant extra access in the Benchling test environment. In Benchling, open the target project, go to Project Settings → Collaborators, add your app as a collaborator, and assign the Read access policy.
    - This is usually not required in Benchling Deployment environment if the app is installed with the right scopes (the information in the Manifest).
    - In any case: Make sure all required entity schemas and folders you are using though the app are declared in the manifest so the app can read what it needs.
 
-6. **Run the correct Stack**  
+7. **Run the correct Stack**  
 
     #### Running the Test Stack
 
     This is intended for local development, using `docker-compose-test.yaml`.<!--   It may enable debugging flags, bind ports differently, or skip SSL.--> 
     Run this code in the terminal:
 
+    ```bash
+    docker compose -f docker-compose-test.yaml --env-file .env up --build
+    ```
     ```bash
     docker compose \
       -f docker-compose-test.yaml \
@@ -156,7 +161,7 @@ If you have updated the manifest you can change it in Version history (in the de
       up --build -d
       ```
 
-7. **Webhook testing**  
+8. **Webhook testing**  
    - Whenever you change the app URL (e.g., switching between deploy and test Docker Compose), verify that Benchling can reach your webhook:
     1. In Benchling, open Developer Console and select your app.
     2. Go to the Webhook testing tab (after changing the URL).
